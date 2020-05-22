@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def categoria_list(request):
+    pass
+
+def categoria_detalle(request, pk):
+    pass

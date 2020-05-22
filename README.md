@@ -1,4 +1,7 @@
 # REST-DJANGO
+Step by Step
+------------------------
+
 1) To Set the environment to work:
 
 - install env
@@ -52,8 +55,8 @@ To watch if it migrates ok !!
 - python3 manage.py dbshell = to go directly to the db
 
 -To watch insde the postgres db = \dt 
---------------------------------------
 
+--------------------------------------
 
 2) Start a new app "dj_puro":
 
@@ -82,3 +85,6 @@ To watch if it migrates ok !!
 
 4) Connect Urls to views:
 
+- Open views on dj_puro
+- Edit URL
+- Create urls.py on dj_puro
