@@ -88,6 +88,7 @@ To watch if it migrates ok !!
 - Open views on dj_puro
 - Edit URL
 - Create urls.py on dj_puro
+<<<<<<< HEAD
 
 5) Creating views:
 - Go into the app views.
@@ -102,3 +103,5 @@ To watch if it migrates ok !!
 ... Categoria(descripcion='Restful Api con Django Framework',activo=False),
 ... Categoria(descripcion='Administracion PostgreSQL',activo=True),
 ... ])
+=======
+>>>>>>> refs/remotes/origin/master
