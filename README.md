@@ -1,38 +1,38 @@
 # REST-DJANGO
 1) To Set the environment to work:
 
-install env
-source my_env/bin/activate
-deactive...
+- install env
+- source my_env/bin/activate
+- deactive...
 --------------------------------
-install inside:
-pip install django
-pip install djangorestframework
-pip install psycopg2
-apt install curl
-pip install --upgrad httpie
-sudo snap install postman
-install postgrespsql
+- install inside:
+- pip install django
+- pip install djangorestframework
+- pip install psycopg2
+- apt install curl
+- pip install --upgrad httpie
+- sudo snap install postman
+- install postgrespsql
 
 ------------------------------------
 Get into the db postgres and create a table:
 
-psql -U sergioq7777 -h 127.0.0.1 -p 5432 -d postgres
+- psql -U sergioq7777 -h 127.0.0.1 -p 5432 -d postgres
 
-or
+- or
 
-sudo -su
-su - postgres
-psql
+- sudo -su
+- su - postgres
+- psql
 
----set de password
+- set de password
 ---------------------------------------------
 CREATE DATABASE drf_api
 - \l = to list
 -----------------------------------------
 env-directory:
 
-django-admin startproject djapi 
+- django-admin startproject djapi 
 
 - go settings and add 'rest_framework' and the db
 DATABASES = {
@@ -50,17 +50,18 @@ DATABASES = {
 
 To watch if it migrates ok !!
 - python3 manage.py dbshell = to go directly to the db
-\dt 
+
+-To watch insde the postgres db = \dt 
 --------------------------------------
 
 
-2) Start an app "dj_puro"
+2) Start a new app "dj_puro":
 
 - django-admin startapp dj_puro
 
-Add the requirements in settings.py
+-Add the requirements in settings.py
 
-INSTALLED_APPS = [
+- INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,11 +72,13 @@ INSTALLED_APPS = [
     'dj_puro',
 ]
 
-3) Crear modelo de api
+3) Create model api in models.py:
 
 
 - go to models and create it.
 -python3 manage.py migrate
 - then : python3 manage.py makemigrations
 - To what what its missing : python3 manage.py showmigration
+
+4) Connect Urls to views:
 
