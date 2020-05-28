@@ -21,11 +21,14 @@ from api.apiviews import CategoriaSave, SubCategoriaSave
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('init/', saludo),
     path('exit/', despedida),
     path('time/', givemetime),
     path('age/<int:edad>/<int:agno>', calculaEdad),
 
+=======
+>>>>>>> d1ab9efe8581a19894795d50d0a00318bd16f9f1
     path('dj-puro/', include('dj_puro.urls')),
     path('api/',include('api.urls')),
     path('v1/categorias/', CategoriaSave.as_view(),name='categoria_save' ),

@@ -5,8 +5,13 @@ from api.apiviews import ProductoList, ProductoDetalle, \
     CategoriaList, SubCategoriaList, SubCategoriaAdd, ProductoViewSet, \
     UserCreate
 
+<<<<<<< HEAD
 #router = DefaultRouter()
 #router.register('v2/productos', ProductoViewSet, base_name = 'productos')
+=======
+router = DefaultRouter()
+router.register('v2/productos/', ProductoViewSet, base_name='productios')
+>>>>>>> d1ab9efe8581a19894795d50d0a00318bd16f9f1
 
 urlpatterns = [
     path('v1/productos/', ProductoList.as_view(),name='producto_list' ),
@@ -21,4 +26,8 @@ urlpatterns = [
     path('v3/usuarios/', UserCreate.as_view(),name='usuario_crear'),
     ]
 
+<<<<<<< HEAD
 # urlpatterns += router.urls
+=======
+urlpatterns += router.urls
+>>>>>>> d1ab9efe8581a19894795d50d0a00318bd16f9f1
