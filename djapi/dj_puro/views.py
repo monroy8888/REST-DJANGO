@@ -8,7 +8,7 @@ def categoria_list(request):
     data = {"results": list(cat.values("descripcion","activo"))}
     return JsonResponse(data)
 
-def categoria_detalles(request, pk):
+def categoria_detalle(request, pk):
     cat = get_object_or_404(Categoria, pk=pk)
     data = {
             "results":{

@@ -88,7 +88,6 @@ To watch if it migrates ok !!
 - Open views on dj_puro
 - Edit URL
 - Create urls.py on dj_puro
-<<<<<<< HEAD
 
 5) Creating views:
 - Go into the app views.
@@ -103,5 +102,82 @@ To watch if it migrates ok !!
 ... Categoria(descripcion='Restful Api con Django Framework',activo=False),
 ... Categoria(descripcion='Administracion PostgreSQL',activo=True),
 ... ])
-=======
->>>>>>> refs/remotes/origin/master
+
+7) Run server and test
+
+- python3 manage.py runserver
+- check the url 127.0.0.1
+
+------------------------------------------------
+
+8) Create app api and add model
+- Make migrations
+- migrate
+- test in the python3 manage.py shell
+---------------
+ADD:
+    Categoria.objects.bulk_create([
+    Categoria(descripcion='Informática'),
+    Categoria(descripcion='Matemáticas'),
+    Categoria(descripcion='Inglés'),
+    Categoria(descripcion='Español'),
+    Categoria(descripcion='Medicina'),
+    ])
+
+    Categoria.objects.all()
+    Categoria.objects.all().values('id','descripcion')
+
+
+    SubCategoria.objects.bulk_create([
+    SubCategoria(categoria_id=1,descripcion='Desarrollo Web'),
+    SubCategoria(categoria_id=1,descripcion='Base de Datos'),
+    SubCategoria(categoria_id=1,descripcion='Desarrollo Desktop'),
+    SubCategoria(categoria_id=1,descripcion='FrameWorks'),
+    SubCategoria(categoria_id=2,descripcion='Algebra'),
+    SubCategoria(categoria_id=2,descripcion='Análisis Numéricos'),
+    SubCategoria(categoria_id=3,descripcion='Principiante'),
+    SubCategoria(categoria_id=3,descripcion='Avanzado'),
+    ])
+
+----------------------------------------
+    #Entramos en el shell de Django 
+    manage.py shell
+
+    from api.serializers import ProductoSerializer
+    from api.models import Producto
+
+
+    prod_serializer = ProductoSerializer(data={"subcategoria":1,"descripcion":"Desarrollo Web con Python usando Django 2.1","fecha_creado":"2018-10-01T12:11:37.090335Z"})
+    prod_serializer.is_valid()
+    prod1 = prod_serializer.save()
+    prod1.pk
+
+        prod_serializer = ProductoSerializer(instance=prod1, data={"subcategoria":1,"descripcion":"Desarrollo Web con Python usando Django","fecha_creado":"2018-10-01T12:11:37.090335Z"})
+    prod_serializer.is_valid()
+    prod_serializer.save()
+
+        prod1 = Producto.objects.all().first()
+    prod_serializer1 = ProductoSerializer(prod1)
+    prod_serializer1.data
+
+    prod2 = ProductoSerializer(Producto.objects.all(),many=True)
+    prod2.data
+
+    ------------------------------------------------------------
+
+        http://127.0.0.1:8000/api/v1/productos/
+    http://127.0.0.1:8000/api/v1/productos/1
+
+
+    Producto.objects.bulk_create([
+    Producto(subcategoria_id=2,descripcion='Replicacion de Base de Datos con SymmetricDS',fecha_creado='2018-11-01T12:11:37.090335Z'),
+    Producto(subcategoria_id=3,descripcion='Desarrollo de Aplicaciones en Capas',fecha_creado='2017-08-01T12:11:37.090335Z'),
+    Producto(subcategoria_id=4,descripcion='Domina ORM de Django',fecha_creado='2019-01-04T12:11:37.090335Z'),
+    Producto(subcategoria_id=4,descripcion='Introducción a Entity FrameWork',fecha_creado='2017-08-05T12:11:37.090335Z'),
+    Producto(subcategoria_id=5,descripcion='Álgebra Baldor',fecha_creado='2015-05-05T12:11:37.090335Z'),
+    ])
+
+    ----------------------------------------------------------
+
+    
+    

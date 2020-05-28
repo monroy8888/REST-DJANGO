@@ -1,4 +1,4 @@
-#!/home/vagrant/DOCKER/Django/Tests/REST-DJANGO/my_env/bin/python3.6
+#!/home/vagrant/DOCKER/Django/Tests/REST-DJANGO/my_env/bin/python
 
 # -*- coding: utf-8 -*-
 import re

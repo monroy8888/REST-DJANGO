@@ -15,8 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from djapi.views import saludo, despedida, givemetime, calculaEdad
+
+from api.apiviews import CategoriaSave, SubCategoriaSave
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dj-puro/', include('dj_puro.urls'))
+    path('init/', saludo),
+    path('exit/', despedida),
+    path('time/', givemetime),
+    path('age/<int:edad>/<int:agno>', calculaEdad),
+
+    path('dj-puro/', include('dj_puro.urls')),
+    path('api/',include('api.urls')),
+    path('v1/categorias/', CategoriaSave.as_view(),name='categoria_save' ),
+    path('v1/subcategorias/', SubCategoriaSave.as_view(),name='subcategoria_save' ),
 ]
