@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'drf_api',
         'HOST': '127.0.0.1',
         'USER': 'postgres',
-        'PASSWORD': '!Andres!.88',
+        'PASSWORD': 'root',
         'PORT': '5432',
     }
 }
