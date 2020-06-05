@@ -1,0 +1,33 @@
+                                      List of relations
+ Schema |               Name                |   Type   |  Owner   |    Size    | Description 
+--------+-----------------------------------+----------+----------+------------+-------------
+ public | api_categoria                     | table    | postgres | 0 bytes    | 
+ public | api_categoria_id_seq              | sequence | postgres | 8192 bytes | 
+ public | api_producto                      | table    | postgres | 0 bytes    | 
+ public | api_producto_id_seq               | sequence | postgres | 8192 bytes | 
+ public | api_subcategoria                  | table    | postgres | 0 bytes    | 
+ public | api_subcategoria_id_seq           | sequence | postgres | 8192 bytes | 
+ public | auth_group                        | table    | postgres | 0 bytes    | 
+ public | auth_group_id_seq                 | sequence | postgres | 8192 bytes | 
+ public | auth_group_permissions            | table    | postgres | 0 bytes    | 
+ public | auth_group_permissions_id_seq     | sequence | postgres | 8192 bytes | 
+ public | auth_permission                   | table    | postgres | 8192 bytes | 
+ public | auth_permission_id_seq            | sequence | postgres | 8192 bytes | 
+ public | auth_user                         | table    | postgres | 8192 bytes | 
+ public | auth_user_groups                  | table    | postgres | 0 bytes    | 
+ public | auth_user_groups_id_seq           | sequence | postgres | 8192 bytes | 
+ public | auth_user_id_seq                  | sequence | postgres | 8192 bytes | 
+ public | auth_user_user_permissions        | table    | postgres | 0 bytes    | 
+ public | auth_user_user_permissions_id_seq | sequence | postgres | 8192 bytes | 
+ public | authtoken_token                   | table    | postgres | 0 bytes    | 
+ public | dj_puro_categoria                 | table    | postgres | 0 bytes    | 
+ public | dj_puro_categoria_id_seq          | sequence | postgres | 8192 bytes | 
+ public | django_admin_log                  | table    | postgres | 8192 bytes | 
+ public | django_admin_log_id_seq           | sequence | postgres | 8192 bytes | 
+ public | django_content_type               | table    | postgres | 8192 bytes | 
+ public | django_content_type_id_seq        | sequence | postgres | 8192 bytes | 
+ public | django_migrations                 | table    | postgres | 16 kB      | 
+ public | django_migrations_id_seq          | sequence | postgres | 8192 bytes | 
+ public | django_session                    | table    | postgres | 8192 bytes | 
+(28 rows)
+
